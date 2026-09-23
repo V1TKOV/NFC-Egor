@@ -49,6 +49,7 @@
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
+            outline: none;
         }
         .btn:active {
             background-color: #1b6ca8;
@@ -57,31 +58,24 @@
 </head>
 <body>
 
+    <!-- Можешь поменять эмодзи и текст на что-то более правдоподобное -->
     <div class="avatar">📢</div>
-    <h1>Название Канала</h1>
+    <h1>Секретный Канал</h1>
     <p>Просмотр поста в Telegram</p>
 
-    <!-- Кнопка выполняет два действия: запускает звук и перенаправляет в Telegram -->
-    <a href="https://t.me/toplesofficial" class="btn" onclick="playSound(event)">Войти в канал</a>
+    <!-- Кнопка только запускает скрипт воспроизведения -->
+    <button class="btn" onclick="playSound()">Войти в канал</button>
 
+    <!-- Твой аудиофайл (должен лежать рядом с файлом index.html) -->
     <audio id="audioPlayer" src="sound.mp3"></audio>
 
     <script>
-        function playSound(event) {
-            // Предотвращаем мгновенный переход на доля секунды, чтобы аудио успело стартовать
-            event.preventDefault();
-            
+        function playSound() {
             const audio = document.getElementById('audioPlayer');
-            const targetUrl = event.currentTarget.href;
-
-            audio.play().then(() => {
-                // Небольшая задержка перед переходом, чтобы звук точно начал воспроизводиться
-                setTimeout(() => {
-                    window.location.href = targetUrl;
-                }, 300); // 300 миллисекунд
-            }).catch(error => {
-                // Если браузер все же заблокировал, сразу кидаем в телегу без звука
-                window.location.href = targetUrl;
+            // Сбрасываем на начало на случай, если кто-то нажмет кнопку дважды
+            audio.currentTime = 0; 
+            audio.play().catch(error => {
+                console.log("Звук не запустился:", error);
             });
         }
     </script>
