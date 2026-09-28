@@ -1,123 +1,406 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Telegram: View @toplesofficial</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>location.hash=''</script>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eef0f5" media="(prefers-color-scheme: light)">
+<title>Киров Егор — цифровая визитка</title>
+<style>
+  :root {
+    --bg: #eef0f5;
+    --card: rgba(255,255,255,.75);
+    --card-border: rgba(255,255,255,.9);
+    --text: #1a1a22;
+    --text2: #6b7280;
+    --btn-bg: rgba(255,255,255,.65);
+    --btn-hover: rgba(255,255,255,.95);
+    --btn-border: rgba(26,26,34,.07);
 
-    <!-- Meta Tags -->
-    <meta property="og:title" content="ТОПЛЕС">
-    <meta property="og:image" content="https://cdn4.telesco.pe/file/GY9iKGc10AagYhot_xq4JEftbuAA69BKosobq7dlz8Kvn86NCLFJomva3BFqNOK9rvf1mSklPGXIQsPX38RLuLd8PFOD25Hr-se78Jv8wDhhd5y77RpBoVITkiGnsa6-U1pzizidGPC1QWfAjunO2Q0vbinMNoDBVyuQkgHD_AOZC5JjuXrK6WGo5Z9OZzFD9arG9Tcjn12XFA0UB7crEZ5trnOqQph2frnBW45kNBWJZMy94FI-uHQa_ZfF0b_h9F_J2CdKEvmc-Ss1Rp7saRJbwuVaQo-DINzhZR_6WYmb33MQt_nwFIF9scqLvQ5n29AA-hSxPogrT0h8IMFovA.jpg">
-    <meta property="og:site_name" content="Telegram">
-    <meta property="og:description" content="Йоп, Ян! Тут ты найдешь факты о самых разных вещах, которые нас окружают. 		По коммерции и контенту: hello@toples.show		Личный тг-канал Яна: @yantoples_official	Наш подкаст ТОПКАСТ: @topcast_show		Регистрация в перечне РКН: https://rkn.link/NA2">
+    /* Палитра: Синий -> Голубой -> Бирюзовый */
+    --accent1: #2563eb;
+    --accent2: #0ea5e9;
+    --accent3: #14b8a6;
+    --shadow: 0 8px 32px rgba(14,165,233,.10);
+    --glow: rgba(14,165,233,.25);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0b10;
+      --card: rgba(24,24,32,.72);
+      --card-border: rgba(255,255,255,.08);
+      --text: #f3f4f8;
+      --text2: #9aa0ad;
+      --btn-bg: rgba(255,255,255,.045);
+      --btn-hover: rgba(255,255,255,.09);
+      --btn-border: rgba(255,255,255,.07);
 
-    <meta property="twitter:title" content="ТОПЛЕС">
-    <meta property="twitter:image" content="https://cdn4.telesco.pe/file/GY9iKGc10AagYhot_xq4JEftbuAA69BKosobq7dlz8Kvn86NCLFJomva3BFqNOK9rvf1mSklPGXIQsPX38RLuLd8PFOD25Hr-se78Jv8wDhhd5y77RpBoVITkiGnsa6-U1pzizidGPC1QWfAjunO2Q0vbinMNoDBVyuQkgHD_AOZC5JjuXrK6WGo5Z9OZzFD9arG9Tcjn12XFA0UB7crEZ5trnOqQph2frnBW45kNBWJZMy94FI-uHQa_ZfF0b_h9F_J2CdKEvmc-Ss1Rp7saRJbwuVaQo-DINzhZR_6WYmb33MQt_nwFIF9scqLvQ5n29AA-hSxPogrT0h8IMFovA.jpg">
-    <meta property="twitter:site" content="@Telegram">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:description" content="Йоп, Ян! Тут ты найдешь факты о самых разных вещах, которые нас окружают. 		По коммерции и контенту: hello@toples.show		Личный тг-канал Яна: @yantoples_official	Наш подкаст ТОПКАСТ: @topcast_show		Регистрация в перечне РКН: https://rkn.link/NA2">
+      /* Темная тема: Светло-синий -> Циан -> Изумрудный */
+      --accent1: #3b82f6;
+      --accent2: #22d3ee;
+      --accent3: #34d399;
+      --shadow: 0 8px 32px rgba(0,0,0,.45);
+      --glow: rgba(34,211,238,.35);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+    position: relative;
+    overflow-x: hidden;
+  }
 
-    <script>window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches&&document.documentElement&&document.documentElement.classList&&document.documentElement.classList.add('theme_dark');</script>
-    <link rel="icon" type="image/svg+xml" href="https://telegram.org/img/website_icon.svg?4">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://telegram.org/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://telegram.org/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://telegram.org/img/favicon-16x16.png">
-    <link rel="alternate icon" href="https://telegram.org/img/favicon.ico" type="image/x-icon" />
-    <link href="https://telegram.org/css/font-roboto.css?1" rel="stylesheet" type="text/css">
-    <link href="https://telegram.org/css/bootstrap.min.css?3" rel="stylesheet">
-    <link href="https://telegram.org/css/telegram.css?255" rel="stylesheet" media="screen">
-  </head>
-  <body class="no_transition">
-      <div class="tgme_background_wrap">
-        <canvas id="tgme_background" class="tgme_background default" width="50" height="50" data-colors="dbddbb,6ba587,d5d88d,88b884"></canvas>
-        <div class="tgme_background_pattern default"></div>
-      </div>
-    <div class="tgme_page_wrap">
-      <div class="tgme_head_wrap">
-        <div class="tgme_head">
-          <a href="#" class="tgme_head_brand sound-trigger">
-            <svg class="tgme_logo" height="34" viewBox="0 0 133 34" width="133" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <circle cx="17" cy="17" fill="var(--accent-btn-color)" r="17"/><path d="m7.06510669 16.9258959c5.22739451-2.1065178 8.71314291-3.4952633 10.45724521-4.1662364 4.9797665-1.9157646 6.0145193-2.2485535 6.6889567-2.2595423.1483363-.0024169.480005.0315855.6948461.192827.1814076.1361492.23132.3200675.2552048.4491519.0238847.1290844.0536269.4231419.0299841.65291-.2698553 2.6225356-1.4375148 8.986738-2.0315537 11.9240228-.2513602 1.2428753-.7499132 1.5088847-1.2290685 1.5496672-1.0413153.0886298-1.8284257-.4857912-2.8369905-1.0972863-1.5782048-.9568691-2.5327083-1.3984317-4.0646293-2.3321592-1.7703998-1.0790837-.212559-1.583655.7963867-2.5529189.2640459-.2536609 4.7753906-4.3097041 4.755976-4.431706-.0070494-.0442984-.1409018-.481649-.2457499-.5678447-.104848-.0861957-.2595946-.0567202-.3712641-.033278-.1582881.0332286-2.6794907 1.5745492-7.5636077 4.6239616-.715635.4545193-1.3638349.6759763-1.9445998.6643712-.64024672-.0127938-1.87182452-.334829-2.78737602-.6100966-1.12296117-.3376271-1.53748501-.4966332-1.45976769-1.0700283.04048-.2986597.32581586-.610598.8560076-.935815z" fill="#fff"/><path d="m49.4 24v-12.562h-4.224v-2.266h11.198v2.266h-4.268v12.562zm16.094-4.598h-7.172c.066 1.936 1.562 2.772 3.3 2.772 1.254 0 2.134-.198 2.97-.484l.396 1.848c-.924.396-2.2.682-3.74.682-3.476 0-5.522-2.134-5.522-5.412 0-2.97 1.804-5.764 5.236-5.764 3.476 0 4.62 2.86 4.62 5.214 0 .506-.044.902-.088 1.144zm-7.172-1.892h4.708c.022-.99-.418-2.618-2.222-2.618-1.672 0-2.376 1.518-2.486 2.618zm9.538 6.49v-15.62h2.706v15.62zm14.84-4.598h-7.172c.066 1.936 1.562 2.772 3.3 2.772 1.254 0 2.134-.198 2.97-.484l.396 1.848c-.924.396-2.2.682-3.74.682-3.476 0-5.522-2.134-5.522-5.412 0-2.97 1.804-5.764 5.236-5.764 3.476 0 4.62 2.86 4.62 5.214 0 .506-.044.902-.088 1.144zm-7.172-1.892h4.708c.022-.99-.418-2.618-2.222-2.618-1.672 0-2.376 1.518-2.486 2.618zm19.24-1.144v6.072c0 2.244-.462 3.85-1.584 4.862-1.1.99-2.662 1.298-4.136 1.298-1.364 0-2.816-.308-3.74-.858l.594-2.046c.682.396 1.826.814 3.124.814 1.76 0 3.08-.924 3.08-3.234v-.924h-.044c-.616.946-1.694 1.584-3.124 1.584-2.662 0-4.554-2.2-4.554-5.236 0-3.52 2.288-5.654 4.862-5.654 1.65 0 2.596.792 3.102 1.672h.044l.11-1.43h2.354c-.044.726-.088 1.606-.088 3.08zm-2.706 2.948v-1.738c0-.264-.022-.506-.088-.726-.286-.99-1.056-1.738-2.2-1.738-1.518 0-2.64 1.32-2.64 3.498 0 1.826.924 3.3 2.618 3.3 1.012 0 1.892-.66 2.2-1.65.088-.264.11-.638.11-.946zm5.622 4.686v-7.26c0-1.452-.022-2.508-.088-3.454h2.332l.11 2.024h.066c.528-1.496 1.782-2.266 2.948-2.266.264 0 .418.022.638.066v2.53c-.242-.044-.484-.066-.814-.066-1.276 0-2.178.814-2.42 2.046-.044.242-.066.528-.066.814v5.566zm16.05-6.424v3.85c0 .968.044 1.914.176 2.574h-2.442l-.198-1.188h-.066c-.638.836-1.76 1.43-3.168 1.43-2.156 0-3.366-1.562-3.366-3.19 0-2.684 2.398-4.07 6.358-4.048v-.176c0-.704-.286-1.87-2.178-1.87-1.056 0-2.156.33-2.882.792l-.528-1.76c.792-.484 2.178-.946 3.872-.946 3.432 0 4.422 2.178 4.422 4.532zm-2.64 2.662v-1.474c-1.914-.022-3.74.374-3.74 2.002 0 1.056.682 1.54 1.54 1.54 1.1 0 1.87-.704 2.134-1.474.066-.198.066-.396.066-.594zm5.6 3.762v-7.524c0-1.232-.044-2.266-.088-3.19h2.31l.132 1.584h.066c.506-.836 1.474-1.826 3.3-1.826 1.408 0 2.508.792 2.97 1.98h.044c.374-.594.814-1.034 1.298-1.342.616-.418 1.298-.638 2.2-.638 1.76 0 3.564 1.21 3.564 4.642v6.314h-2.64v-5.918c0-1.782-.616-2.838-1.914-2.838-.924 0-1.606.66-1.892 1.43-.088.242-.132.594-.132.902v6.424h-2.64v-6.204c0-1.496-.594-2.552-1.848-2.552-1.012 0-1.694.792-1.958 1.518-.088.286-.132.594-.132.902v6.336z" fill="var(--tme-logo-color)" fill-rule="nonzero"/>
-              </g>
-            </svg>
-          </a>
-          <a class="tgme_head_right_btn sound-trigger" href="#">Download</a>
-        </div>
-      </div>
+  /* Фоновые пятна */
+  body::before, body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  body::before {
+    width: 420px; height: 420px;
+    top: -140px; left: -120px;
+    background: radial-gradient(circle, var(--accent2), transparent 65%);
+    opacity: .35;
+  }
+  body::after {
+    width: 380px; height: 380px;
+    bottom: -120px; right: -100px;
+    background: radial-gradient(circle, var(--accent3), transparent 65%);
+    opacity: .22;
+  }
 
-      <div class="tgme_body_wrap">
-        <div class="tgme_page">
-          <div class="tgme_page_photo">
-            <a href="#" class="sound-trigger">
-              <img class="tgme_page_photo_image" src="https://cdn4.telesco.pe/file/GY9iKGc10AagYhot_xq4JEftbuAA69BKosobq7dlz8Kvn86NCLFJomva3BFqNOK9rvf1mSklPGXIQsPX38RLuLd8PFOD25Hr-se78Jv8wDhhd5y77RpBoVITkiGnsa6-U1pzizidGPC1QWfAjunO2Q0vbinMNoDBVyuQkgHD_AOZC5JjuXrK6WGo5Z9OZzFD9arG9Tcjn12XFA0UB7crEZ5trnOqQph2frnBW45kNBWJZMy94FI-uHQa_ZfF0b_h9F_J2CdKEvmc-Ss1Rp7saRJbwuVaQo-DINzhZR_6WYmb33MQt_nwFIF9scqLvQ5n29AA-hSxPogrT0h8IMFovA.jpg">
-            </a>
-          </div>
-          <div class="tgme_page_title" dir="auto">
-            <span dir="auto">ТОПЛЕС</span><i class="verified-icon"> ✔</i>
-          </div>
-          <div class="tgme_page_extra">509 542 subscribers</div>
-          <div class="tgme_page_description" dir="auto">
-            Йоп, Ян! Тут ты найдешь факты о самых разных вещах, которые нас окружают. <br/><br/>
-            По коммерции и контенту: hello@toples.show<br/><br/>
-            Личный тг-канал Яна: @yantoples_official<br/>
-            Наш подкаст ТОПКАСТ: @topcast_show<br/><br/>
-            Регистрация в перечне РКН: https://rkn.link/NA2
-          </div>
-          <div class="tgme_page_action">
-            <!-- Главная кнопка -->
-            <a class="tgme_action_button_new shine sound-trigger" href="#">View in Telegram</a>
-          </div>
-          <div class="tgme_page_context_link_wrap">
-            <a class="tgme_page_context_link sound-trigger" href="#">Preview channel</a>
-          </div>
-          <div class="tgme_page_additional">
-            If you have <strong>Telegram</strong>, you can view and join <br><strong>ТОПЛЕС</strong> right away.
-          </div>
-        </div>
-      </div>
-    </div>
+  .card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 430px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 34px 22px 24px;
+    height: fit-content;
+  }
 
-    <!-- Элемент аудио -->
-    <audio id="prankAudio" src="sound.mp3" preload="auto"></audio>
+  /* Аватар с градиентным кольцом */
+  .avatar-wrap {
+    position: relative;
+    width: 104px; height: 104px;
+    margin: 0 auto 18px;
+  }
+  .avatar-wrap::before {
+    content: '';
+    position: absolute; inset: -4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent1), var(--accent2), var(--accent3));
+    animation: spin 6s linear infinite;
+  }
+  .avatar-wrap::after {
+    content: '';
+    position: absolute; inset: -14px;
+    border-radius: 50%;
+    background: var(--glow);
+    filter: blur(22px);
+    z-index: -1;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .avatar {
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(160deg, #0f172a, #020617);
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px; font-weight: 700; letter-spacing: .02em;
+  }
 
-    <script src="https://telegram.org/js/tgwallpaper.min.js?3"></script>
-    <script type="text/javascript">
-      // Анимация фонового узора Telegram
-      var tme_bg = document.getElementById('tgme_background');
-      if (tme_bg && window.TWallpaper) {
-        TWallpaper.init(tme_bg);
-        TWallpaper.animate(true);
-        window.onfocus = function(){ TWallpaper.update(); };
-      }
-      document.body.classList.remove('no_transition');
+  h1 {
+    font-size: 27px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    background: linear-gradient(120deg, var(--text) 40%, var(--accent2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--text2);
+    font-size: 13.5px;
+    margin: 7px 0 24px;
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+  }
+  .pulse {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #34d399;
+    box-shadow: 0 0 0 0 rgba(52,211,153,.5);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(52,211,153,.45); }
+    70% { box-shadow: 0 0 0 8px rgba(52,211,153,0); }
+    100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+  }
 
-      // Переключение темы (темная/светлая в зависимости от системы)
-      function toggleTheme(dark) {
-        document.documentElement.classList.toggle('theme_dark', dark);
-      }
-      if (window.matchMedia) {
-        var darkMedia = window.matchMedia('(prefers-color-scheme: dark)');
-        toggleTheme(darkMedia.matches);
-        darkMedia.addListener(function(e) {
-          toggleTheme(e.matches);
-        });
-      }
+  /* Сетка плиток */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .tile {
+    display: flex; flex-direction: column; align-items: center; gap: 9px;
+    padding: 16px 8px 13px;
+    background: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+    border-radius: 18px;
+    color: var(--text);
+    font-size: 13.5px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    font-family: inherit;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+  }
+  .tile:hover { background: var(--btn-hover); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+  .tile:active { transform: translateY(0) scale(.97); }
+  .tile .icon {
+    width: 46px; height: 46px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    transition: transform .18s ease;
+  }
+  .tile:hover .icon { transform: scale(1.1) rotate(-4deg); }
+  .tile .icon svg { width: 23px; height: 23px; fill: currentColor; }
+  .tile span:last-child { line-height: 1.25; }
 
-      // Привязка воспроизведения звука ко всем кликабельным элементам
-      var audio = document.getElementById('prankAudio');
-      var triggers = document.querySelectorAll('.sound-trigger');
+  /* Кнопки на всю ширину (строкой) */
+  .btn.wide {
+    display: flex; align-items: center; gap: 14px;
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 10px;
+    background: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+    border-radius: 18px;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+  }
+  .btn.wide:hover { background: var(--btn-hover); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+  .btn.wide:active { transform: translateY(0) scale(.98); }
+  .btn.wide .icon {
+    width: 42px; height: 42px; flex: 0 0 42px;
+    border-radius: 13px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    transition: transform .18s ease;
+  }
+  .btn.wide:hover .icon { transform: scale(1.08) rotate(-4deg); }
+  .btn.wide .icon svg { width: 21px; height: 21px; fill: currentColor; }
+  .btn.wide small { display: block; color: var(--text2); font-size: 12px; margin-top: 2px; font-weight: 400; }
 
-      triggers.forEach(function(el) {
-        el.addEventListener('click', function(e) {
-          e.preventDefault(); // Запрещаем переход по ссылке
-          audio.currentTime = 0; // Начинаем сначала при повторном клике
-          audio.play().catch(function(err) {
-            console.log("Ошибка воспроизведения:", err);
+  /* Фирменные цвета иконок */
+  .ic-call    { background: linear-gradient(135deg, #34d399, #059669); }
+  .ic-mail    { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+  .ic-tg      { background: linear-gradient(135deg, #38bdf8, #229ed9); }
+  .ic-wa      { background: linear-gradient(135deg, #4ade80, #22c55e); }
+  .ic-money   { background: linear-gradient(135deg, #fb923c, #ea580c); }
+  .ic-geo     { background: linear-gradient(135deg, #f87171, #ef4444); }
+  .ic-contact { background: linear-gradient(135deg, #38bdf8, #2563eb); }
+  .ic-home    { background: linear-gradient(135deg, #818cf8, #4f46e5); }
+
+  /* Toast */
+  .toast {
+    position: fixed; left: 50%; bottom: 26px;
+    transform: translateX(-50%) translateY(90px);
+    background: var(--text); color: var(--bg);
+    padding: 12px 20px; border-radius: 14px;
+    font-size: 14px; font-weight: 500;
+    opacity: 0;
+    transition: all .3s cubic-bezier(.2,.9,.3,1.3);
+    pointer-events: none;
+    max-width: 88vw; text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    z-index: 100;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* Появление элементов */
+  .fade-up { animation: fadeUp .55s ease backwards; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .d1 { animation-delay: .05s; } .d2 { animation-delay: .12s; }
+  .d3 { animation-delay: .19s; } .d4 { animation-delay: .26s; }
+  .d5 { animation-delay: .33s; } .d6 { animation-delay: .40s; }
+  .d7 { animation-delay: .47s; } .d8 { animation-delay: .54s; }
+  .d9 { animation-delay: .61s; }
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<div class="card">
+  <div class="avatar-wrap fade-up d1">
+    <div class="avatar">КЕ</div>
+  </div>
+  <h1 class="fade-up d2">Киров Егор</h1>
+  <p class="subtitle fade-up d3"><span class="pulse"></span>Цифровая визитка · NFC-карта</p>
+
+  <button class="btn wide fade-up d4" onclick="downloadVCard()">
+    <span class="icon ic-contact"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 12c4.42 0 8 2.24 8 5v3H4v-3c0-2.76 3.58-5 8-5Z"/></svg></span>
+    <span>Добавить в контакты<small>Имя, фамилия, телефон, почта</small></span>
+  </button>
+
+  <div class="grid">
+    <a class="tile fade-up d5" href="tel:+37378952210">
+      <span class="icon ic-call"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02Z"/></svg></span>
+      <span>Позвонить</span>
+    </a>
+
+    <a class="tile fade-up d5" href="mailto:egorkirov23@gmail.com">
+      <span class="icon ic-mail"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5Z"/></svg></span>
+      <span>Почта</span>
+    </a>
+
+    <a class="tile fade-up d6" href="https://t.me/Kirov_E" target="_blank" rel="noopener">
+      <span class="icon ic-tg"><svg viewBox="0 0 24 24"><path d="M21.9 4.6 18.8 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.6L18 6.9c.4-.3-.1-.5-.6-.2L7.2 13.2 2.7 11.8c-1-.3-1-1 .2-1.4l18-7c.8-.3 1.5.2 1 1.2Z"/></svg></span>
+      <span>Telegram</span>
+    </a>
+
+    <a class="tile fade-up d6" href="https://wa.me/37378952210" target="_blank" rel="noopener">
+      <span class="icon ic-wa"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.7 1.8.8 1.9c.1.1.1.3 0 .5l-.4.6c-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.8.4.2.6.1.8-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.4 0 0 .1.6-.2 1.3Z"/></svg></span>
+      <span>WhatsApp</span>
+    </a>
+
+    <a class="tile fade-up d7" href="https://mia-qr.bnm.md/1/m/BNM/MCB7d0a89d21e1d4c8a93ca8e991618d65b" target="_blank" rel="noopener">
+      <span class="icon ic-money"><svg viewBox="0 0 24 24"><path d="M12 2 2 7v2h20V7Zm-10 9v8H2v3h20v-3h-2v-8Zm4 0h4v4H6Zm6 0h4v8h-4ZM4 13v6h2v-6Zm0 0"/></svg></span>
+      <span>Перевести деньги</span>
+    </a>
+
+    <button class="tile fade-up d7" onclick="shareFoundLocation()">
+      <span class="icon ic-geo"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
+      <span>Карта найдена<br>здесь</span>
+    </button>
+  </div>
+
+  <a class="btn wide fade-up d8" href="https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE+17%2C+%D0%A2%D0%B0%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%8F%2C+%D0%9C%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D0%B0" target="_blank" rel="noopener">
+    <span class="icon ic-home"><svg viewBox="0 0 24 24"><path d="m12 3 9 8h-3v9h-4v-6h-4v6H6v-9H3Z"/></svg></span>
+    <span>Вернуть карточку владельцу<small>ул. Дзержинского 17, Тараклия, Молдова</small></span>
+  </a>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // ---------- vCard ----------
+  function downloadVCard() {
+    const vcf = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N:Kirov;Egor;;;',
+      'FN:Киров Егор',
+      'TEL;TYPE=CELL:+37378952210',
+      'EMAIL:egorkirov23@gmail.com',
+      'END:VCARD'
+    ].join('\r\n');
+    const blob = new Blob([vcf], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Egor-Kirov.vcf';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    showToast('Файл контакта сохранён — откройте его, чтобы добавить в контакты');
+  }
+
+  // ---------- Геолокация: отправка координат на почту ----------
+  function shareFoundLocation() {
+    if (!navigator.geolocation) {
+      showToast('Геолокация не поддерживается на этом устройстве');
+      return;
+    }
+    showToast('Определяем местоположение…');
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        const { latitude, longitude, accuracy } = pos.coords;
+        const mapsUrl = 'https://www.google.com/maps?q=' + latitude + ',' + longitude;
+        const text = 'Вашу NFC-карту отсканировали!\n' +
+                     'Координаты: ' + latitude + ', ' + longitude +
+                     ' (точность ~' + Math.round(accuracy) + ' м)\n' +
+                     'На карте: ' + mapsUrl + '\n' +
+                     'Время: ' + new Date().toLocaleString();
+        try {
+          const res = await fetch('https://formsubmit.co/ajax/egorkirov23@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              _subject: '📍 NFC-карта найдена!',
+              _template: 'table',
+              _captcha: 'false',
+              message: text
+            })
           });
-        });
-      });
-    </script>
-  </body>
+          if (!res.ok) throw new Error();
+          showToast('✅ Отправлено! Егор получил местоположение');
+        } catch (e) {
+          // Если отправка не сработала — предлагаем поделиться вручную
+          if (navigator.share) {
+            navigator.share({ title: 'Карта найдена здесь', text: 'Отправьте это Егору:', url: mapsUrl }).catch(() => {});
+          } else {
+            window.open(mapsUrl, '_blank');
+          }
+        }
+      },
+      () => showToast('Не удалось получить геолокацию — проверьте разрешения'),
+      { enableHighAccuracy: true, timeout: 10000 }
+    );
+  }
+
+  // ---------- Toast ----------
+  let toastTimer;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
+  }
+</script>
+
+</body>
 </html>
